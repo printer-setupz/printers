@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <title>Online Printer Setup and Driver Download</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .topNavBar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 3;
+    }
+
+    .topBanner {
+      margin-top: 76px;
+    }
+
+    .topNumber {
+      font-size: 30px;
+    }
+
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-light navbar-light py-3 topNavBar shadow-sm">
+    <div class="container">
+     <a class="navbar-brand fw-bold fs-4" href="#"><span style="color: #0096D6;">Software and Drivers</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <p class="topNumber"></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-5 pt-5">
+    <div class="container">
+
+      <!-- Driver Download Section -->
+      <div class="row" id="div1">
+        <div class="col-lg-8 offset-lg-2 my-5">
+          <div class="card border-0 shadow">
+            <div class="card-header text-center p-4">
+              <i class="fas fa-download me-3 fs-3 text-primary"></i>Download Drivers
+            </div>
+            <div class="card-body p-4 my-3 p-md-5 my-md-4 text-center">
+              <p class="fs-5 mb-4">Downloading drivers...</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+              </div>
+              <p class="mt-2" id="text1">Checking printer spooler service...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+<!-- Error Section -->
+<div class="row hide" id="div2">
+  <div class="col-lg-10 offset-lg-1 my-5"> <!-- Adjusted width -->
+    <div class="card border-0 shadow" style="width: 100%;"> <!-- Added width style -->
+      <div class="card-body p-4 d-flex align-items-center">
+        <div class="flex-grow-1">
+          <p class="fs-4 fw-bold"><strong>Installation Wizard</strong></p>
+          <p class="fs-5 text-danger">Fatal error occurred during the printer installation..</p>
+          <ul>
+            <li>Printer installation failed. Operation could not be completed (Error 0x00000490)</li>
+            <li>System cannot locate a suitable printer driver.</li>
+          </ul>
+          <p class="font-weight-bold mb-2">Call us to fix the issue</p>
+          <span class="d-inline-block p-2 bg-light border rounded text-dark font-weight-bold custom-border" style="font-size: 1.25rem;">
+            1-888-405-8269 (Toll-Free)
+          </span>
+          <p class="text-danger mt-3">Note: Do not attempt to retry the installation as it can damage the printer and void the product warranty.</p>
+          <p class="mt-3">Need additional help with setup? Visit <a href="#">Support</a></p>
+        </div>
+        <div class="ml-4">
+          <img src="img/errors.png" class="img-fluid rounded shadow" alt="Error Illustration">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Scripts -->
+  <script>
+    var texts = ["Gathering network information...", "Checking network port...", "Checking printer spooler service..."];
+    var index = 0;
+    setInterval(function () {
+      document.getElementById("text1").textContent = texts[index];
+      index = (index + 1) % texts.length;
+    }, 4000);
+
+    setTimeout(function () {
+      document.getElementById('div1').style.display = 'none';
+      document.getElementById('div2').style.display = 'block';
+    }, 15000);
+  </script>
+
+</body>
+
+</html>

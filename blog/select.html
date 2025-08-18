@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer Setup</title>
+    <!-- Bootstrap.min CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .banner {
+            background-color: #000; /* Black background for the banner */
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .feature-block {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            flex: 1;
+            margin: 15px;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-item:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-main {
+            background-color: #007bff;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .btn-main:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .feature-item img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+<header>
+	<nav class="navbar navbar-expand-lg navigation" id="navbar">
+		<div class="container">
+		 	 <a class="navbar-brand" href="#">
+			  	<div class="logo-text">Printer Setup</div>
+			  </a>
+
+		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="icofont-navigation-menu"></span>
+		  </button>
+	  
+		  <div class="collapse navbar-collapse" id="navbarmain">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="javascript:void(0);">Home</a>
+			  </li>
+			   <li class="nav-item">
+				<a class="nav-link" href="javascript:void(0);">Office Jet</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="javascript:void(0);">Laser Jet</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="javascript:void(0);">Ink Jet</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="javascript:void(0);">Envy</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="javascript:void(0);">Pixma</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	</nav>
+</header>    
+
+<!-- Slider Start -->
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="block text-center">
+                    <span class="text-uppercase text-sm letter-spacing text-white">Printer Setup</span>
+                    <h1 class="mb-3 mt-3">Download Your Printer Drivers</h1>
+                    <p class="mb-4 text-white" style="font-size: 28px;">Select Your Printer Model</p>
+
+                    <!-- Image Section within Banner -->
+                    <div class="row justify-content-center">
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center mb-3">
+                            <a href="https://hp.printerinstalleren.nl/" id="formCtrl"><img src="img/hp.webp" class="img-thumbnail img-fluid bannerimg shadow" /></a>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center mb-3">
+                            <a href="from-canon.php"><img src="img/can.webp" class="img-thumbnail img-fluid bannerimg shadow" /></a>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center mb-3">
+                            <a href="from-brother.php"><img src="img/brot.webp" class="img-thumbnail img-fluid bannerimg shadow" /></a>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center mb-3">
+                            <a href="from-epson.php"><img src="img/ep.webp" class="img-thumbnail img-fluid bannerimg shadow" /></a>
+                        </div>
+                    </div>
+                    <!-- End of Image Section -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
